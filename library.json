@@ -1,6 +1,6 @@
 {
 	"name": "HWStepper",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "An esp32 library for controlling steppers using hardware timers for high speed movement",
 	"keywords": "esp32, stepper, motor, timer, ISR, HWStepper, Hardware, accelerated, low level",
 	"repository":
