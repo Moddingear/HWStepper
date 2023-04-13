@@ -262,7 +262,8 @@ void IRAM_ATTR HWStepperTimerISR()
 	{
 		uint64_t NextWait = Timings[TimerIndex].WaitBefore;
 		timerAlarmWrite(HWStepperTimer, NextWait, true);
-		xSemaphoreGiveFromISR(TimingsSemaphore, pdFALSE);
+		BaseType_t Awoken = pdFALSE;
+		xSemaphoreGiveFromISR(TimingsSemaphore, &Awoken);
 	}
 }
 
